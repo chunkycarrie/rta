@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/api/v1.0/predict", methods=['GET'])
 def pred():
-    url = "https://github.com/chunkycarrie/rta/raw/main/perceptron_modified.pkl"
+    url = "https://github.com/chunkycarrie/rta/raw/master/perceptron_modified.pkl"
     response = requests.get(url)
     model = io.BytesIO(response.content)
     nn = pickle.load(model)
